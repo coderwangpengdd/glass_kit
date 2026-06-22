@@ -56,23 +56,31 @@ class GlassContainer extends StatelessWidget {
     this.transformAlignment,
     BorderRadius? borderRadius,
     BoxShape shape = BoxShape.rectangle,
-  })  : shape = shape,
-        blur = blur ?? kBlur,
-        borderWidth = borderWidth ?? kBorderWidth,
-        isFrostedGlass = isFrostedGlass ?? kIsFrosted,
-        frostedOpacity = frostedOpacity ?? kFrostedOpacity,
-        borderRadius = shape == BoxShape.rectangle
-            ? (borderRadius ?? kBorderRadius)
-            : null,
-        assert(color != null || gradient != null,
-            'Both color and gradient cannot be null\n'),
-        assert(borderColor != null || borderGradient != null,
-            'Both borderColor and borderGradient cannot be null\n'),
-        assert(shape != BoxShape.circle || borderRadius == null,
-            'The [borderRadius] needs to be null if the shape is [BoxShape.circle]\n'),
-        assert(kIsWeb != true || borderColor != null,
-            'borderColor cannot be null when runing on the Web\n'),
-        super(key: key);
+  }) : shape = shape,
+       blur = blur ?? kBlur,
+       borderWidth = borderWidth ?? kBorderWidth,
+       isFrostedGlass = isFrostedGlass ?? kIsFrosted,
+       frostedOpacity = frostedOpacity ?? kFrostedOpacity,
+       borderRadius = shape == BoxShape.rectangle
+           ? (borderRadius ?? kBorderRadius)
+           : null,
+       assert(
+         color != null || gradient != null,
+         'Both color and gradient cannot be null\n',
+       ),
+       assert(
+         borderColor != null || borderGradient != null,
+         'Both borderColor and borderGradient cannot be null\n',
+       ),
+       assert(
+         shape != BoxShape.circle || borderRadius == null,
+         'The [borderRadius] needs to be null if the shape is [BoxShape.circle]\n',
+       ),
+       assert(
+         kIsWeb != true || borderColor != null,
+         'borderColor cannot be null when runing on the Web\n',
+       ),
+       super(key: key);
 
   /// Creates a widget that extends [GlassContainer] to implement a clear glass
   /// effect.
@@ -106,33 +114,37 @@ class GlassContainer extends StatelessWidget {
     BoxShape shape = BoxShape.rectangle,
     Widget? child,
     List<BoxShadow>? boxShadow,
-  })  : height = height,
-        width = width,
-        isFrostedGlass = false,
-        frostedOpacity = 0.0,
-        blur = blur ?? kBlur,
-        gradient = gradient ?? (color == null ? kGradientFill : null),
-        color = color,
-        borderGradient = borderGradient ??
-            (borderColor == null ? kBorderGradientFill : null),
-        borderColor = borderColor,
-        borderRadius = shape == BoxShape.rectangle
-            ? (borderRadius ?? kBorderRadius)
-            : null,
-        borderWidth = borderWidth ?? kBorderWidth,
-        margin = margin,
-        padding = padding,
-        shape = shape,
-        transform = transform,
-        transformAlignment = transformAlignment,
-        alignment = alignment,
-        child = child,
-        boxShadow = boxShadow,
-        assert(shape != BoxShape.circle || borderRadius == null,
-            'The [borderRadius] needs to be null if the shape is [BoxShape.circle]\n'),
-        assert(kIsWeb != true || borderColor != null,
-            'borderColor cannot be null when runing on the Web\n'),
-        super(key: key);
+  }) : height = height,
+       width = width,
+       isFrostedGlass = false,
+       frostedOpacity = 0.0,
+       blur = blur ?? kBlur,
+       gradient = gradient ?? (color == null ? kGradientFill : null),
+       color = color,
+       borderGradient =
+           borderGradient ?? (borderColor == null ? kBorderGradientFill : null),
+       borderColor = borderColor,
+       borderRadius = shape == BoxShape.rectangle
+           ? (borderRadius ?? kBorderRadius)
+           : null,
+       borderWidth = borderWidth ?? kBorderWidth,
+       margin = margin,
+       padding = padding,
+       shape = shape,
+       transform = transform,
+       transformAlignment = transformAlignment,
+       alignment = alignment,
+       child = child,
+       boxShadow = boxShadow,
+       assert(
+         shape != BoxShape.circle || borderRadius == null,
+         'The [borderRadius] needs to be null if the shape is [BoxShape.circle]\n',
+       ),
+       assert(
+         kIsWeb != true || borderColor != null,
+         'borderColor cannot be null when runing on the Web\n',
+       ),
+       super(key: key);
 
   /// Creates a widget that extends [GlassContainer] to implement a frosted glass
   /// effect.
@@ -167,33 +179,37 @@ class GlassContainer extends StatelessWidget {
     double? frostedOpacity,
     Widget? child,
     List<BoxShadow>? boxShadow,
-  })  : height = height,
-        width = width,
-        isFrostedGlass = true,
-        frostedOpacity = frostedOpacity ?? kFrostedOpacity,
-        blur = blur ?? kBlur,
-        gradient = gradient ?? (color == null ? kGradientFill : null),
-        color = color,
-        borderGradient = borderGradient ??
-            (borderColor == null ? kBorderGradientFill : null),
-        borderColor = borderColor,
-        borderRadius = shape == BoxShape.rectangle
-            ? (borderRadius ?? kBorderRadius)
-            : null,
-        borderWidth = borderWidth ?? kBorderWidth,
-        margin = margin,
-        padding = padding,
-        shape = shape,
-        transform = transform,
-        transformAlignment = transformAlignment,
-        alignment = alignment,
-        child = child,
-        boxShadow = boxShadow,
-        assert(shape != BoxShape.circle || borderRadius == null,
-            'The [borderRadius] needs to be null if the shape is [BoxShape.circle]\n'),
-        assert(kIsWeb != true || borderColor != null,
-            'borderColor cannot be null when runing on the Web\n'),
-        super(key: key);
+  }) : height = height,
+       width = width,
+       isFrostedGlass = true,
+       frostedOpacity = frostedOpacity ?? kFrostedOpacity,
+       blur = blur ?? kBlur,
+       gradient = gradient ?? (color == null ? kGradientFill : null),
+       color = color,
+       borderGradient =
+           borderGradient ?? (borderColor == null ? kBorderGradientFill : null),
+       borderColor = borderColor,
+       borderRadius = shape == BoxShape.rectangle
+           ? (borderRadius ?? kBorderRadius)
+           : null,
+       borderWidth = borderWidth ?? kBorderWidth,
+       margin = margin,
+       padding = padding,
+       shape = shape,
+       transform = transform,
+       transformAlignment = transformAlignment,
+       alignment = alignment,
+       child = child,
+       boxShadow = boxShadow,
+       assert(
+         shape != BoxShape.circle || borderRadius == null,
+         'The [borderRadius] needs to be null if the shape is [BoxShape.circle]\n',
+       ),
+       assert(
+         kIsWeb != true || borderColor != null,
+         'borderColor cannot be null when runing on the Web\n',
+       ),
+       super(key: key);
 
   /// The [child] contained by the GlassContainer.
   final Widget? child;
@@ -303,16 +319,18 @@ class GlassContainer extends StatelessWidget {
     if (!isFrostedGlass || frostedOpacity == 0.0 || kIsWeb) {
       return SizedBox.shrink();
     } else {
-      return LayoutBuilder(builder: (context, constraints) {
-        final height = getHeight(constraints);
-        final width = getWidth(constraints);
+      return LayoutBuilder(
+        builder: (context, constraints) {
+          final height = getHeight(constraints);
+          final width = getWidth(constraints);
 
-        return _FrostedWidget(
-          height: height,
-          frostedOpacity: frostedOpacity,
-          width: _isCircle ? height : width,
-        );
-      });
+          return _FrostedWidget(
+            height: height,
+            frostedOpacity: frostedOpacity,
+            width: _isCircle ? height : width,
+          );
+        },
+      );
     }
   }
 
@@ -320,15 +338,17 @@ class GlassContainer extends StatelessWidget {
   BackdropFilter get _backdropFilterContainer {
     return BackdropFilter(
       filter: ImageFilter.blur(sigmaX: blur, sigmaY: blur),
-      child: LayoutBuilder(builder: (context, constraints) {
-        final height = getHeight(constraints);
-        final width = getWidth(constraints);
-        return Container(
-          height: height,
-          width: _isCircle ? height : width,
-          decoration: BoxDecoration(shape: shape, color: Colors.transparent),
-        );
-      }),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final height = getHeight(constraints);
+          final width = getWidth(constraints);
+          return Container(
+            height: height,
+            width: _isCircle ? height : width,
+            decoration: BoxDecoration(shape: shape, color: Colors.transparent),
+          );
+        },
+      ),
     );
   }
 
@@ -363,7 +383,7 @@ class GlassContainer extends StatelessWidget {
       padding: padding,
       alignment: alignment,
       width: _isCircle ? height : width,
-      child: SizedBox.expand(child: current),
+      child: current,
       decoration: BoxDecoration(
         shape: shape,
         color: color,
@@ -438,27 +458,74 @@ class GlassContainer extends StatelessWidget {
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties.add(ObjectFlagProperty<Matrix4>.has('transform', transform));
-    properties.add(DiagnosticsProperty<double>('borderWidth', borderWidth,
-        defaultValue: kBorderWidth, ifNull: 'no border width'));
-    properties.add(DiagnosticsProperty<EdgeInsetsGeometry>('padding', padding,
-        defaultValue: null));
-    properties.add(DiagnosticsProperty<EdgeInsetsGeometry>('margin', margin,
-        defaultValue: null));
-    properties.add(DiagnosticsProperty<bool>('isfrostedGlass', isFrostedGlass,
-        defaultValue: kIsFrosted, ifNull: '<indeterminate>'));
-    properties.add(PercentProperty('frostedOpacity', frostedOpacity,
-        showName: true, ifNull: '<indeterminate>'));
-    properties.add(EnumProperty<BoxShape>('shape', shape,
-        defaultValue: BoxShape.rectangle, level: DiagnosticLevel.info));
-    properties
-        .add(DiagnosticsProperty<double>('blur', blur, defaultValue: kBlur));
-    properties
-        .add(DiagnosticsProperty<BorderRadius>('borderRadius', borderRadius));
-    properties.add(DiagnosticsProperty<AlignmentGeometry>(
-        'alignment', alignment,
-        defaultValue: null, showName: false));
-    properties.add(IterableProperty<BoxShadow>('boxShadow', boxShadow,
-        defaultValue: null, style: DiagnosticsTreeStyle.whitespace));
+    properties.add(
+      DiagnosticsProperty<double>(
+        'borderWidth',
+        borderWidth,
+        defaultValue: kBorderWidth,
+        ifNull: 'no border width',
+      ),
+    );
+    properties.add(
+      DiagnosticsProperty<EdgeInsetsGeometry>(
+        'padding',
+        padding,
+        defaultValue: null,
+      ),
+    );
+    properties.add(
+      DiagnosticsProperty<EdgeInsetsGeometry>(
+        'margin',
+        margin,
+        defaultValue: null,
+      ),
+    );
+    properties.add(
+      DiagnosticsProperty<bool>(
+        'isfrostedGlass',
+        isFrostedGlass,
+        defaultValue: kIsFrosted,
+        ifNull: '<indeterminate>',
+      ),
+    );
+    properties.add(
+      PercentProperty(
+        'frostedOpacity',
+        frostedOpacity,
+        showName: true,
+        ifNull: '<indeterminate>',
+      ),
+    );
+    properties.add(
+      EnumProperty<BoxShape>(
+        'shape',
+        shape,
+        defaultValue: BoxShape.rectangle,
+        level: DiagnosticLevel.info,
+      ),
+    );
+    properties.add(
+      DiagnosticsProperty<double>('blur', blur, defaultValue: kBlur),
+    );
+    properties.add(
+      DiagnosticsProperty<BorderRadius>('borderRadius', borderRadius),
+    );
+    properties.add(
+      DiagnosticsProperty<AlignmentGeometry>(
+        'alignment',
+        alignment,
+        defaultValue: null,
+        showName: false,
+      ),
+    );
+    properties.add(
+      IterableProperty<BoxShadow>(
+        'boxShadow',
+        boxShadow,
+        defaultValue: null,
+        style: DiagnosticsTreeStyle.whitespace,
+      ),
+    );
 
     if (gradient != null) {
       properties.add(DiagnosticsProperty<Gradient>('bg', gradient));
@@ -467,8 +534,9 @@ class GlassContainer extends StatelessWidget {
     }
 
     if (borderGradient != null) {
-      properties
-          .add(DiagnosticsProperty<Gradient>('borderGradient', borderGradient));
+      properties.add(
+        DiagnosticsProperty<Gradient>('borderGradient', borderGradient),
+      );
     } else {
       properties.add(ColorProperty('borderColor', borderColor));
     }
